@@ -1,0 +1,553 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet');
+@font-face {
+  font-family: "Futura";
+  src: url("../fonts/FuturaMediumBT.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Futura";
+  src: url("../fonts/FutuLt.ttf") format("truetype");
+  font-weight: 300;
+}
+:root {
+  --white: #fff;
+  --whitegray: #c0c0c0;
+  --gray: #737373;
+  --dark: #414141;
+  --darker: #1b1b1b;
+  --darkest: #333;
+  --black: #000;
+  --blue: #3636a5;
+  --pink: #ff6584;
+  --baseFont: "Muli", sans-serif;
+  --bannerFont: "Futura", sans-serif;
+  --btnh: color 0.2s ease, background 0.2s ease;
+  --p: .8em 1.8em;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+html {
+  font-size: 16px;
+  font-family: var(--baseFont);
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  white-space: nowrap;
+  width: 100%;
+  padding: 0;
+}
+.container .left-cont,
+.container .right-cont,
+.container .service {
+  white-space: normal;
+}
+
+.logo {
+  display: inline-block;
+}
+
+nav {
+  background: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 30px;
+  z-index: 999;
+  transition: top 0.2s ease, background 0.1s ease;
+}
+nav .header {
+  display: flex;
+}
+nav .header .logo {
+  display: inherit;
+  align-self: center;
+}
+nav .header .logo a {
+  display: inherit;
+}
+nav .header .menu {
+  background: var(--white);
+  align-self: center;
+  display: inline-block;
+  border-radius: 2rem;
+  margin-left: auto;
+}
+nav .header .menu ul {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 1em 2.5em;
+}
+nav .header .menu ul li {
+  display: inherit;
+}
+nav .header .menu ul li a {
+  font-family: var(--baseFont);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--dark);
+  padding: 0 1em;
+}
+nav .header .menu ul li a:hover {
+  color: var(--blue);
+}
+
+nav.active {
+  background: var(--white);
+  top: 0;
+}
+
+header {
+  background: url("../img/background.jpg");
+  height: 112vh;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+header .left-cont {
+  display: inline-block;
+  padding-top: 5rem;
+  width: 50%;
+}
+header .left-cont h1 {
+  font-family: var(--bannerFont);
+  text-transform: uppercase;
+  color: var(--darker);
+  font-size: 3.4rem;
+  padding: 0 0 0.7em;
+  font-weight: 400;
+  line-height: 1em;
+}
+header .left-cont h1 span {
+  display: block;
+  color: var(--blue);
+}
+header .left-cont p {
+  font-family: var(--bannerFont);
+  color: var(--gray);
+  font-size: 1.15rem;
+  font-weight: 200;
+  width: 70%;
+  line-height: 1.5em;
+  padding: 0 0 2.4em;
+}
+header .left-cont .call-to-action .learn-more {
+  font-family: var(--bannerFont);
+  font-weight: 300;
+  display: inline-block;
+  font-size: 1.15rem;
+  padding: var(--p);
+  background: var(--white);
+  border-radius: 2rem;
+  color: var(--darkest);
+  text-decoration: none;
+  box-shadow: 1px 1px 8px rgba(45, 45, 45, 0.25);
+  border: solid 1px #eee;
+  transition: var(--btnh);
+  margin-right: 20px;
+}
+header .left-cont .call-to-action .learn-more:hover {
+  color: var(--white);
+  background: var(--blue);
+}
+header .left-cont .call-to-action .request-quote {
+  font-family: var(--bannerFont);
+  font-weight: 300;
+  display: inline-block;
+  font-size: 1.15rem;
+  padding: var(--p);
+  background: var(--white);
+  border-radius: 2rem;
+  color: var(--darkest);
+  text-decoration: none;
+  box-shadow: 1px 1px 8px rgba(45, 45, 45, 0.25);
+  border: solid 1px #eee;
+  transition: var(--btnh);
+}
+header .left-cont .call-to-action .request-quote:hover {
+  color: var(--white);
+  background: var(--blue);
+}
+header .right-cont {
+  display: inline-block;
+  width: 50%;
+  text-align: right;
+}
+
+#welcome {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+#welcome .left-cont {
+  display: inline-block;
+  align-self: center;
+  width: 40%;
+}
+#welcome .left-cont h2 {
+  color: var(--whitegray);
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: var(--bannerFont);
+  text-transform: uppercase;
+  line-height: 1.5em;
+}
+#welcome .left-cont h2 span {
+  display: block;
+  color: var(--black);
+  font-size: 3.1rem;
+  font-weight: 400;
+  line-height: 0.97em;
+}
+#welcome .left-cont h2 span strong {
+  font-weight: 400;
+  color: var(--blue);
+  display: block;
+}
+#welcome .right-cont {
+  display: inline-block;
+  width: 59%;
+}
+#welcome .right-cont p {
+  color: var(--darkest);
+  font-family: var(--bannerFont);
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5em;
+}
+
+#services {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+#services .service {
+  display: inline-block;
+  width: 33.33%;
+}
+#services .service h3 {
+  color: var(--black);
+  font-family: var(--bannerFont);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  padding-top: 0.5em;
+}
+#services .service p {
+  color: var(--darkest);
+  font-family: var(--bannerFont);
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5em;
+  padding: 0.9em 3em;
+}
+#services .service a {
+  display: block;
+  background: var(--blue);
+  border-radius: 3em;
+  padding: var(--p);
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--white);
+  width: 50%;
+  margin: 0 auto;
+  transition: var(--btnh);
+}
+#services .service a:hover {
+  background: var(--pink);
+}
+
+#mobile {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+#mobile .left-cont {
+  display: inline-block;
+  align-self: center;
+  width: 50%;
+}
+#mobile .left-cont h2 {
+  font-family: var(--bannerFont);
+  text-transform: uppercase;
+  display: block;
+  color: var(--black);
+  font-size: 3.1rem;
+  font-weight: 400;
+  line-height: 0.97em;
+  padding-top: 0.5em;
+}
+#mobile .left-cont h2 span {
+  display: block;
+}
+#mobile .left-cont p {
+  color: var(--darkest);
+  font-family: var(--bannerFont);
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5em;
+  padding: 0.9em 0;
+  width: 60%;
+}
+#mobile .left-cont a {
+  display: block;
+  background: var(--blue);
+  border-radius: 3em;
+  padding: var(--p);
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--white);
+  width: 33%;
+  text-align: center;
+  transition: var(--btnh);
+}
+#mobile .left-cont a:hover {
+  background: var(--pink);
+}
+#mobile .right-cont {
+  display: inline-block;
+  align-self: center;
+  width: 50%;
+}
+
+#contact {
+  background: url("../img/contact-bg.jpg");
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-content: center;
+}
+#contact .left-cont {
+  align-self: center;
+  text-align: center;
+  display: inline-block;
+  width: 50%;
+}
+#contact .right-cont {
+  display: inline-block;
+  align-self: center;
+  width: 50%;
+}
+#contact .right-cont h2 {
+  font-family: var(--bannerFont);
+  text-transform: uppercase;
+  display: block;
+  color: var(--black);
+  font-size: 3.1rem;
+  font-weight: 400;
+  line-height: 0.97em;
+  padding-top: 0.5em;
+}
+#contact .right-cont p {
+  color: var(--darkest);
+  font-family: var(--bannerFont);
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5em;
+}
+#contact .right-cont form {
+  display: block;
+  padding: 0 20px;
+}
+#contact .right-cont form .fname,
+#contact .right-cont form .email {
+  display: block;
+  border-radius: 35px;
+  font-weight: 300;
+  border: none;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  font-family: var(--bannerFont);
+  font-size: 1rem;
+  color: var(--darkest);
+}
+#contact .right-cont form .msg {
+  display: block;
+  border-radius: 35px;
+  font-weight: 300;
+  border: none;
+  width: 100%;
+  height: 184px;
+  line-height: 50px;
+  font-family: var(--bannerFont);
+  font-size: 1rem;
+  color: var(--darkest);
+}
+#contact .right-cont form .btn {
+  margin-top: 20px;
+  background: var(--blue);
+  font-weight: 300;
+  text-transform: uppercase;
+  display: block;
+  color: var(--white);
+  font-family: var(--bannerFont);
+  font-size: 1.2rem;
+  border: none;
+  padding: var(--p);
+  border-radius: 35px;
+  cursor: pointer;
+  transition: var(--btnh);
+  width: 190px;
+}
+#contact .right-cont form .btn:hover {
+  background: var(--pink);
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  height: 60vh;
+}
+footer .container {
+  display: flex;
+}
+footer .left-cont {
+  display: inline-block;
+  width: 30%;
+}
+footer .left-cont p {
+  font-family: var(--bannerFont);
+  font-weight: 300;
+  color: var(--darkest);
+}
+footer .left-cont .social {
+  margin-top: 3rem;
+}
+footer .left-cont .social p {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: var(--bannerFont);
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+footer .left-cont .social a {
+  display: inline-block;
+}
+footer .right-cont {
+  display: inline-block;
+  width: 70%;
+}
+footer .right-cont .navigation {
+  display: inline-block;
+  width: 33.33%;
+  white-space: normal;
+}
+footer .right-cont .navigation p {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: var(--bannerFont);
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+footer .right-cont .navigation ul li {
+  list-style: none;
+  line-height: 2rem;
+}
+footer .right-cont .navigation ul li a {
+  text-decoration: none;
+  font-family: var(--baseFont);
+  font-size: 1rem;
+  color: var(--dark);
+}
+footer .right-cont .navigation ul li a:hover {
+  color: var(--blue);
+}
+footer .right-cont .services {
+  display: inline-block;
+  width: 33.33%;
+  white-space: normal;
+}
+footer .right-cont .services p {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: var(--bannerFont);
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+footer .right-cont .services ul li {
+  list-style: none;
+  line-height: 2rem;
+}
+footer .right-cont .services ul li a {
+  text-decoration: none;
+  font-family: var(--baseFont);
+  font-size: 1rem;
+  color: var(--dark);
+}
+footer .right-cont .services ul li a:hover {
+  color: var(--blue);
+}
+footer .right-cont .contact {
+  display: inline-block;
+  width: 33.33%;
+  white-space: normal;
+}
+footer .right-cont .contact p {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: var(--bannerFont);
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+footer .right-cont .contact ul li {
+  list-style: none;
+  line-height: 2rem;
+}
+footer .right-cont .contact ul li a {
+  text-decoration: none;
+  font-family: var(--baseFont);
+  font-size: 1rem;
+  color: var(--dark);
+}
+footer .right-cont .contact ul li a:hover {
+  color: var(--blue);
+}
+footer .right-cont.col-3 {
+  white-space: nowrap;
+  display: flex;
+}
+
+#credits {
+  height: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+#credits .col {
+  display: block;
+}
+#credits .col p {
+  display: inline-block;
+  font-size: 16px;
+  font-family: var(--bannerFont);
+  font-weight: 300;
+}
+#credits .col p a {
+  text-decoration: none;
+  color: var(--dark);
+}
+#credits .col p a:hover {
+  color: var(--blue);
+}
+#credits .col p:first-child {
+  margin-right: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */
