@@ -17,6 +17,10 @@
                     <a href="index.html"><img src="img/logo.png" alt="Design & Development"></a>
                 </div>
                 <div class="menu">
+                    <label for="nav-toggle" class="nav-toggle-label">
+                        <span></span>
+                    </label>
+                    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="#">About Us</a></li>
@@ -32,17 +36,19 @@
 
     <header>
         <div class="container">
-            <div class="left-cont">
-                <h1>Design & <span>Development</span></h1>
-                <p>Dolor non excepteur. Commodo sed aliqua dolor. Adipisicing nisi ad cillum. In, ullamco amet ut
-                    deserunt ullamco cupidatat.</p>
-                <div class="call-to-action">
-                    <a class="learn-more" href="">Learn More</a>
-                    <a class="request-quote" href="">Request a Quote</a>
+            <div class="item">
+                <div class="left-cont">
+                    <h1>Design & <span>Development</span></h1>
+                    <p>Dolor non excepteur. Commodo sed aliqua dolor. Adipisicing nisi ad cillum. In, ullamco amet ut
+                        deserunt ullamco cupidatat.</p>
+                    <div class="call-to-action">
+                        <a class="learn-more" href="">Learn More</a>
+                        <a class="request-quote" href="">Request a Quote</a>
+                    </div>
                 </div>
-            </div>
-            <div class="right-cont">
-                <img src="img/design.png" alt="People Talking about technology">
+                <div class="right-cont">
+                    <img src="img/design.png" alt="People Talking about technology">
+                </div>
             </div>
         </div>
     </header>
@@ -88,7 +94,7 @@
     <section id="mobile">
         <div class="container flex">
             <div class="left-cont">
-                <h2>Mobile<span>Friendly</span></h2>
+                <h2>Mobile <span>Friendly</span></h2>
                 <p>Sint ipsum fugiat ut aliquip consequat incididunt ipsum veniam? Cillum, duis non, eiusmod in est
                     ipsum irure est ullamco irure in. Dolor sed officia, eu dolore ut culpa sed ut. </p>
                 <a href="#">Click Here</a>
@@ -120,12 +126,14 @@
     </section>
 
     <footer>
-        <div class="container">
+        <div class="container flex">
             <div class="left-cont">
-                <a href="#">
-                    <img src="img/footerlogo.png" alt="Footer Logo">
-                </a>
-                <p>© Copyright <span class="year">2000</span> • All Rights Reserved</p>
+                <div class="copy">
+                    <a href="#">
+                        <img src="img/footerlogo.png" alt="Footer Logo">
+                    </a>
+                    <p>© Copyright <span class="year">2000</span> • All Rights Reserved</p>
+                </div>
 
                 <div class="social">
                     <p>Follow us:</p>
@@ -171,6 +179,7 @@
             </div>
         </div>
     </footer>
+
     <section id="credits">
         <div class="container">
             <div class="col">
